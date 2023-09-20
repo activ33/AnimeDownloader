@@ -104,4 +104,5 @@ if not os.path.exists(title):
 for key, value in tqdm.tqdm(episodes.items(), desc="Downloading Episodes"):
     destination = os.path.join(title,f"{key}_{lang}_{quality}.mp4")
     download_link = get_dl_link(value)
+    print("download_link")
     pahe.download_file(url=download_link, destination=destination)
