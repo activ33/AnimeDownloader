@@ -91,6 +91,7 @@ for key, items in episodes.items():
 # Fetch video links
 for key, value in tqdm.tqdm(episodes.items(), desc="Parsing links"):
     episodes[key] = pahe.dl_apahe2(value)
+    printe(episodes[key])
 
 # Confirmation and download initiation
 _ = input("Starting To Download. Make sure to connect to Wifi. Press Enter to continue...")
